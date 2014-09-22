@@ -1,1 +1,1 @@
-web: python checkins.py 5003
+web: python checkins.py
