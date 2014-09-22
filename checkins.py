@@ -5,15 +5,18 @@ from flask import render_template
 from flask import request
 
 app = Flask(__name__)
+app.config.update(DEBUG = True,)
 
 
 @app.route('/', methods=['GET','POST'])
 def index(name=None):
-	return render_template('checkins.html')
+	return " Hello index"
+	#return render_template('checkins.html')
 
 @app.route('/checkins', methods=['GET','POST'])
 def checkins(name=None):
-	return render_template('inside.html')
+	return "hello "
+	#return render_template('inside.html')
 
 if __name__ == '__main__':
 	port = int(os.environ.get("DEV_PORT", 5003))
